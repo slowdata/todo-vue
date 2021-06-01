@@ -1,9 +1,9 @@
 <template>
     <div
-        class="mt-14 flex flex-col
-      justify-center items-center"
+        class="flex flex-col items-center mt-14 
+      "
     >
-        <h1 class="text-4xl mb-10">
+        <h1 class="text-4xl mb-10 text-gray-700">
             TODO's
         </h1>
         <card />
