@@ -3,8 +3,8 @@
         class="flex flex-col items-center mt-14 
       "
     >
-        <h1 class="text-4xl mb-10 text-gray-700">
-            TODO's
+        <h1 class="text-4xl font-mono mb-10 text-gray-700">
+            TO DO's
         </h1>
         <card />
     </div>
