@@ -9,14 +9,22 @@
             <span class="text-green-600">T</span
             ><span class="text-green-900">O</span> DO's
         </h1>
-        <card />
+
+        <card>
+            <todo-imput />
+        </card>
     </div>
 </template>
 
 <script>
 import Card from "./components/Card";
+import TodoImput from "./components/TodoImput";
+
 export default {
     name: "App",
-    components: { Card },
+    components: {
+        Card,
+        TodoImput,
+    },
 };
 </script>

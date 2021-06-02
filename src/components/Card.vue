@@ -1,14 +1,9 @@
 <template>
-    <div class="p-4 border border-gray-200 rounded-md shadow-md">
-        <todo-imput />
+    <div class="p-6 border border-gray-200 rounded-md shadow-md">
+        <slot />
     </div>
 </template>
 
 <script>
-import TodoImput from "./TodoImput";
-export default {
-    components: {
-        TodoImput,
-    },
-};
+export default {};
 </script>
