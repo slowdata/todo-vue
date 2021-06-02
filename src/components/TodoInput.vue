@@ -1,5 +1,5 @@
 <template>
-    <form class="flex">
+    <form class="flex" @submit.prevent="$emit('addTodo', todo)">
         <input
             class="w-full px-2 py-3 rounded-md
             focus:outline-none focus:ring-2
