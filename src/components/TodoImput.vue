@@ -1,12 +1,12 @@
 <template>
-    <form action="" class="flex">
+    <form class="flex">
         <input
             class="w-full px-2 py-3 rounded-md
             focus:outline-none focus:ring-2
             focus:ring-gray-300"
             type="text"
             placeholder="Insert a new todo"
-            v-bind="todo"
+            v-model="todo"
         />
         <button
             class="ml-2 px-4 border border-gray-300 rounded-lg
@@ -18,5 +18,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            todo: "",
+        };
+    },
+};
 </script>

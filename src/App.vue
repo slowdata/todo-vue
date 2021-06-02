@@ -12,6 +12,9 @@
 
         <card>
             <todo-imput />
+            <ul>
+                <li v-for="todo in todos" :key="todo.id">{{ todo.value }}</li>
+            </ul>
         </card>
     </div>
 </template>
@@ -25,6 +28,14 @@ export default {
     components: {
         Card,
         TodoImput,
+    },
+    data() {
+        return {
+            todos: [
+                { id: 1, value: "Meu primeiro todo" },
+                { id: 2, value: "Meu segundo todo" },
+            ],
+        };
     },
 };
 </script>
