@@ -1,5 +1,5 @@
 <template>
-    <div class="w-1/2 p-4 border border-gray-200 rounded-md shadow-md">
+    <div class="p-4 border border-gray-200 rounded-md shadow-md">
         <todo-imput />
     </div>
 </template>

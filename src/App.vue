@@ -1,10 +1,13 @@
 <template>
     <div
-        class="flex flex-col items-center mt-14 
+        class="w-5/6 max-w-2xl mx-auto mt-10
       "
     >
-        <h1 class="text-4xl font-mono mb-10 text-gray-700">
-            TO DO's
+        <h1
+            class="mb-10 text-center text-4xl font-mono font-semibold text-gray-700"
+        >
+            <span class="text-green-600">T</span
+            ><span class="text-green-900">O</span> DO's
         </h1>
         <card />
     </div>
