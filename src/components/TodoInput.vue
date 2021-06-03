@@ -5,7 +5,7 @@
             focus:outline-none focus:ring-2
             focus:ring-gray-300"
             type="text"
-            placeholder="Insert a new todo"
+            placeholder="Insert a new to do..."
             v-model="todo"
         />
         <button

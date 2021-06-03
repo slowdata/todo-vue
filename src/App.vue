@@ -12,17 +12,27 @@
 
         <card>
             <todo-input @addTodo="newTodo" ref="todoInputText" />
-            <button
-                class="px-4 mt-4 mx-auto flex content-center 
-                focus:outline-none border-b border-green-700 hover:border-b-2"
-                @click="hideDone"
-            >
-                Filter
-            </button>
+            <div class="mt-6 w-1/2 mx-auto flex justify-evenly">
+                <button
+                    class="py-1 px-4 hover:font-semibold focus:outline-none"
+                    :class="{ 'border-b border-green-600 ': filter }"
+                    @click="toggleFilter"
+                >
+                    Filter
+                </button>
+                <button
+                    class="py-1 px-4 hover:font-semibold focus:outline-none"
+                    :class="{ 'border-b border-green-600 ': order }"
+                    @click="toggleOrder"
+                >
+                    Order
+                </button>
+            </div>
             <todo-list
                 :todos="todos"
                 @removeTodo="remove"
                 @markDone="handleDone"
+                :filter="filter"
             />
         </card>
     </div>
@@ -42,15 +52,21 @@ export default {
     },
     data() {
         return {
-            show: true,
+            filter: false,
+            order: false,
             todos: [
                 {
                     id: 1,
                     value: "Meu primeiro todo",
                     status: false,
-                    show: true,
+                    created: new Date("Thu, 03 Jun 2021 09:00:00 GMT"),
                 },
-                { id: 2, value: "Meu segundo todo", status: false, show: true },
+                {
+                    id: 2,
+                    value: "Meu segundo todo",
+                    status: false,
+                    created: new Date("Thu, 03 Jun 2021 11:00:00 GMT"),
+                },
             ],
         };
     },
@@ -63,7 +79,7 @@ export default {
                         id: this.todos.length + 1,
                         value,
                         status: false,
-                        show: true,
+                        created: new Date().toUTCString(),
                     },
                 ];
 
@@ -85,14 +101,19 @@ export default {
                 return t;
             });
         },
-        hideDone() {
+        toggleFilter() {
+            this.filter = !this.filter;
+        },
+        toggleOrder() {
             const newTodos = [...this.todos];
-            this.todos = newTodos.map((t) => {
-                if (t.status) t.show = this.show;
-                return t;
+            this.todos = newTodos.sort((t, newt) => {
+                if (this.order) {
+                    return new Date(t.created) - new Date(newt.created);
+                } else {
+                    return new Date(newt.created) - new Date(t.created);
+                }
             });
-
-            this.show = !this.show;
+            this.order = !this.order;
         },
     },
 };
