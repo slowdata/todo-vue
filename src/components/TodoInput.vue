@@ -10,7 +10,7 @@
         />
         <button
             class="ml-2 px-4 border border-gray-300 rounded-lg
-        hover:text-white hover:bg-gradient-to-r
+        hover:text-white hover:bg-gradient-to-r focus:outline-none
         hover:from-green-500 hover:to-green-900 "
         >
             Add
