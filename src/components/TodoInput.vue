@@ -1,7 +1,7 @@
 <template>
     <form class="flex" @submit.prevent="$emit('addTodo', todo)">
         <input
-            class="w-full px-2 py-3 rounded-md
+            class="w-full px-2 py-2 md:py-3 rounded-md
             focus:outline-none focus:ring-2
             focus:ring-gray-300"
             type="text"

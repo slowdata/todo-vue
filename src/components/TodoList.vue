@@ -31,7 +31,7 @@
                     <span>{{ todo.value }}</span>
                 </div>
                 <button
-                    class="w-8 h-8 rounded-full border text-red-600 font-bold"
+                    class="w-7 md:w-8 h-7 md:h-8 rounded-full border text-red-600 font-bold text-sm md:text-base"
                     @click.prevent="$emit('removeTodo', todo.id)"
                 >
                     X
