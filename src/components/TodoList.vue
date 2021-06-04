@@ -1,12 +1,12 @@
 <template>
-    <ul class="mt-6 mx-auto p-2 w-4/5">
+    <ul class="mt-6 mx-auto p-2 md:w-4/5">
         <li v-for="todo in todos" :key="todo.id">
             <div
                 v-if="!(filter && todo.status)"
                 class="mb-4 p-2 text-gray-500 text-lg border-b flex justify-between items-center"
             >
                 <div
-                    class="flex items-center cursor-pointer"
+                    class="flex items-center cursor-pointer text-sm md:text-base"
                     :class="{
                         'line-through italic text-green-700 font-semibold':
                             todo.status,

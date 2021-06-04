@@ -57,13 +57,13 @@ export default {
             todos: [
                 {
                     id: 1,
-                    value: "Meu primeiro todo",
+                    value: "Turn on the computer.",
                     status: false,
                     created: new Date("Thu, 03 Jun 2021 09:00:00 GMT"),
                 },
                 {
                     id: 2,
-                    value: "Meu segundo todo",
+                    value: "Connect to the internet.",
                     status: false,
                     created: new Date("Thu, 03 Jun 2021 11:00:00 GMT"),
                 },
