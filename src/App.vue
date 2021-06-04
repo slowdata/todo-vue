@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-screen sm:w-5/6 px-4 max-w-2xl mx-auto mt-32
+        class="sm:w-5/6 px-4 max-w-2xl mx-auto mt-14 sm:mt-28
       "
     >
         <h1
